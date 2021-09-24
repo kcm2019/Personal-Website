@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Jost">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kurt Muller</title>
+        <style>
+            #para1 {
+                font-family: Jost;
+            }
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                font-family: Jost;
+                font-weight: bolder;
+                letter-spacing: -.07em;
+            }
+
+            body {
+                font-family: 'Jost', sans-serif;
+                font-size: 20px;
+                letter-spacing: -.04em;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: whitesmoke;
+                position: -webkit-sticky; /* Safari */
+                position: sticky;
+                top: 0;
+                width: 100%;
+                font-family: Jost;
+                text-align: center;
+                letter-spacing: -.06em;
+            }
+
+            .topnav a {
+                float:left;
+                display: block;
+                color: #000000;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                border-radius: 0px;
+                margin-right: 0px;
+                background-color: none;
+            }
+
+            .topnav a:hover {
+                background-color: whitesmoke;
+                color: rgb(173, 39, 39);
+            }
+
+            .topnav a.active {
+                background-color: whitesmoke;
+                color: rgb(173, 39, 39);
+            }
+
+            .topnav .icon {
+                display: none;
+            }
+
+            header {
+                background-color: red;
+            }
+            /* Mobile Device screen optimization */
+            @media screen and (max-width: 600px) {
+                .topnav a:not(:first-child) {display: none;}
+                .topnav a.icon {
+                    float: right;
+                    display: block;
+                    position: sticky;
+                }
+            }
+            
+            /* Mobile Device screen optimization */
+            @media screen and (max-width: 600px) {
+                .topnav.responsive {position: sticky;}
+                .topnav.responsive .icon {
+                    position: sticky;
+                    right: 0;
+                    top: 0;
+                }
+                .topnav.responsive a {
+                        float: none;
+                        display: block;
+                        text-align: left;
+                    }
+            }
+            /* Image Scaling Properties*/
+            /*img {
+                width: 100%;
+                height: auto;
+            }*/
+
+            /* Image Slider */
+            .slider {
+                width: 500px;
+                height: 300px;
+                background-color: yellow;
+                margin-left: 16px;
+                margin-right: auto;
+                margin-top: 0px;
+                text-align: center;
+                overflow: hidden;
+                border-radius: 12px;
+            }
+            .image-container {
+                width: 100%;
+                background-color: pink;
+                height: auto;
+                clear: both;
+                position: relative;
+                -webkit-transition: left 2s;
+                -moz-transition: left 2s;
+                -o-transition: left 2s;
+                transition: left 2s;
+            }
+
+            .header-image-container {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+            .centered-image-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 50px;
+                color: rgb(248, 0, 0);
+            }
+            .text-container {
+                height: auto;
+                width: auto;
+                text-align: center;
+                font-size: 12px;
+            }
+
+            .slide {
+                float: left;
+                margin: 0px;
+                padding: 0px;
+                position: relative;
+            }
+            #slide-1:target ~ .image-container {
+                left: 0px;
+            }
+            #slide-2:target ~ .image-container {
+                left: -500px;
+            }
+            #slide-3:target ~ .image-container {
+                left: -1000px;
+            }
+            .buttons {
+                position: relative;
+                top: -20px;
+            }
+            .buttons a {
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+                border-radius: 50px;
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body style="background-color: whitesmoke;">
+        <div class="header">
+            <h1>KURT MULLER</h1>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars">=</i>
+            </a>
+        </div>
+        <hr />
+        <div class="image-container">
+            <p style="float: left;"><img src="Memoji.png" alt="Picture of my Memoji" height="200px" width="200px"/>
+        </div>
+        <br />
+        <p style="margin: auto;"> 
+            Hello, my name is Kurt Muller! I am currently a junior at student at Adelphi University. I am majoring in Computer Science with a focus on software engineering. I have an interest in the economy so I am persung two minors, a Finance and Economics minor, as well.
+            <br /><br />
+        <div class="text-container">   
+            <p style="font-size: 50px;">Experience</p>
+            <ul>
+                <li>Lifeguard
+                    <ul>
+                        <li>Managed the pool and its members, making sure that other lifeguards were doing their job and that
+                            members were acting in an appropriate manner</li>
+                        <li>Ensured a safe and clean environment by watching over members and maintained chemical levels in the pool</li>
+                        <li>Reported to management the different issues at the pools that were assigned</li>
+                    </ul>
+                </li>
+                <li>Commis Waiter</li>
+                    <ul>
+                        <li>Managed tables and the service that customers received, taking their orders and any requests a customer may have</li>
+                        <li>Kept the dining area cleaned and items in stock for use by other employees</li>
+                        <li>Assisted other workers with requests and tasks necessary to ensure smooth service</li>
+                    </ul>
+                </li>
+                <li>Apple Specialist
+                    <ul>
+                        <li>Aid customers in determining what product/solution is best for the customers' needs</li>
+                        <li>Assisting team members and fulfilling necessary roles</li>
+                        <li>Create excitement around products</li>
+                    </ul>
+                </li>
+            </ul>
+            <br />Check out my GitHub Page Here:<br />
+                <a href = "https://github.com/kcm2019">GitHub</a>
+            <br />Check out my HandShake Profile Here:<br />
+                <a href = "https://app.joinhandshake.com/users/21949778">HandShake</a>
+            <br />Random XHTML Document <br />
+                <a href = "linkeddoc.html">Linked HTML Doc</a>
+        </p>
+        </div>
+            
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+            }
+        </script>
+    </body>
+</html>
+
